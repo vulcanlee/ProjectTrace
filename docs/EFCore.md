@@ -1,8 +1,8 @@
 # 第一次 Migration 
 
 ```
-Add-Migration add-meeting -Project MyProject.AccessDatas -StartupProject MyProject.Web 
-Add-Migration Add-Status -Project MyProject.AccessDatas -StartupProject MyProject.Web 
+Add-Migration add-meeting -Project ProjectTrace.AccessDatas -StartupProject ProjectTrace.Web 
+Add-Migration Add-Status -Project ProjectTrace.AccessDatas -StartupProject ProjectTrace.Web 
 ```
 
 * -Context <String>	
@@ -24,33 +24,33 @@ Add-Migration Add-Status -Project MyProject.AccessDatas -StartupProject MyProjec
 # 更新資料庫
 
 ```
-Update-Database -Context BackendDBContext -StartupProject MyProject.Web -Project MyProject.AccessDatas
+Update-Database -Context BackendDBContext -StartupProject ProjectTrace.Web -Project ProjectTrace.AccessDatas
 ```
 
 # 套用 Migration 
 
 ```
-Add-Migration AddAthleteExamine -Context BackendDBContext -Project MyProject.AccessDatas -StartupProject MyProject.Web 
+Add-Migration AddAthleteExamine -Context BackendDBContext -Project ProjectTrace.AccessDatas -StartupProject ProjectTrace.Web 
 ```
 
 ```
-dotnet ef migrations add AddAthleteExamine --project MyProject.AccessDatas --startup-project MyProject.Web 
+dotnet ef migrations add AddAthleteExamine --project ProjectTrace.AccessDatas --startup-project ProjectTrace.Web 
 ```
 
 
 # 移除 Migration
 
 ```
-Remove-Migration -Context BackendDBContext -Project MyProject.AccessDatas -StartupProject MyProject.Web
+Remove-Migration -Context BackendDBContext -Project ProjectTrace.AccessDatas -StartupProject ProjectTrace.Web
 ```
 
 ```
-dotnet ef migrations remove --project MyProject.AccessDatas --startup-project MyProject.Web
+dotnet ef migrations remove --project ProjectTrace.AccessDatas --startup-project ProjectTrace.Web
 ```
 
 # 套用移轉
 
 ```
-Script-Migration -Project MyProject.AccessDatas -StartupProject MyProject.Web
+Script-Migration -Project ProjectTrace.AccessDatas -StartupProject ProjectTrace.Web
 ```
 
